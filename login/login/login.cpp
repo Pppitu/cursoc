@@ -14,7 +14,7 @@ bool verificaHumano() {
 
 int main() {
     int intentos = 0;
-    while (not verificaHumano()) {
+    while (!verificaHumano()) {
         intentos++;
         cout << "Valor incorrecto\n";
         if (5 == intentos) {
