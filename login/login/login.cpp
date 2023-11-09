@@ -1,31 +1,30 @@
-// login.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
-//
-
 #include <iostream>
 
 using namespace std;
 
-int main()
-{
-    bool sal = false;
-    while (not sal) {
-        cout << "Introduzca el resultado de 5 + 9\n";
-        int res;
-        cin >> res;
-        if (14 == res) {
-            sal = true;
-        }
-        cout << "\n";
+bool verificaHumano() {
+    cout << "Introduzca el resultado de 5 + 9\n";
+    int resul;
+    cin >> resul;
+    if (14 == resul) {
+        return true;
     }
-
+    return false;
 }
 
-// Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
-// Depurar programa: F5 o menú Depurar > Iniciar depuración
+int main() {
+    int intentos = 0;
+    while (not verificaHumano()) {
+        intentos++;
+        cout << "Valor incorrecto\n";
+        if (5 == intentos) {
+            cout << "Demasiados errores. Intentalo mas tarde\n";
+            return 1;
+        }
+        cout << "Pulsa una tecla e intentalo de nuevo\n";
+        system("pause");
+    }
+    cout << "Muy bien\n";
+    return 0;
+}
 
-// Sugerencias para primeros pasos: 1. Use la ventana del Explorador de soluciones para agregar y administrar archivos
-//   2. Use la ventana de Team Explorer para conectar con el control de código fuente
-//   3. Use la ventana de salida para ver la salida de compilación y otros mensajes
-//   4. Use la ventana Lista de errores para ver los errores
-//   5. Vaya a Proyecto > Agregar nuevo elemento para crear nuevos archivos de código, o a Proyecto > Agregar elemento existente para agregar archivos de código existentes al proyecto
-//   6. En el futuro, para volver a abrir este proyecto, vaya a Archivo > Abrir > Proyecto y seleccione el archivo .sln
