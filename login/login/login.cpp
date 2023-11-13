@@ -3,21 +3,23 @@
 using namespace std;
 
 bool verificaHumano() {
+    const int resultado = 14;
     cout << "Introduzca el resultado de 5 + 9\n";
     int resul;
     cin >> resul;
-    if (14 == resul) {
+    if (resultado == resul) {
         return true;
     }
     return false;
 }
 
 int main() {
+    const int max_intentos = 3;
     int intentos = 0;
     while (!verificaHumano()) {
         intentos++;
         cout << "Valor incorrecto\n";
-        if (5 == intentos) {
+        if (max_intentos == intentos) {
             cout << "Demasiados errores. Intentalo mas tarde\n";
             return 1;
         }
