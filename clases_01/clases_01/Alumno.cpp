@@ -4,9 +4,10 @@
 
 void Alumno::pideDatos() {
 	cout << "Introduzca el nombre del alumno: ";
-	cin >> nombre;
+	getline(cin >> ws, nombre);
 	cout << "Introduzca la nota del alumno: ";
 	cin >> nota;
+	system("pause");
 };
 
 void Alumno::pintaDatos() {
