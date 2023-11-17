@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <iostream>
 #include <locale.h>
 #include <string>
@@ -18,6 +19,7 @@ int main() {
         alumno.pideDatos();
         alumnosLst.push_back(alumno);
     }
+    system("cls");
     for (Alumno alumno : alumnosLst) {
         alumno.pintaDatos();
     }
