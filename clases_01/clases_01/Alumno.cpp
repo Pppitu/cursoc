@@ -8,7 +8,6 @@ void Alumno::pideDatos() {
 	getline(cin >> ws, nombre);
 	cout << "Introduzca la nota del alumno: ";
 	cin >> nota;
-	//system("pause");
 };
 
 void Alumno::pintaDatos() {
