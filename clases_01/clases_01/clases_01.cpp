@@ -9,7 +9,7 @@
 using namespace std;
 
 void clearScreen() {
-    printf("\033[2J" "\033[1;1H");
+    printf("\033[2J\033[1;1H");
 }
 
 int main() {
