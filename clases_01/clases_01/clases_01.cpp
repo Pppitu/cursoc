@@ -8,6 +8,10 @@
 
 using namespace std;
 
+void clearScreen() {
+    printf("\033[2J" "\033[1;1H");
+}
+
 int main() {
     setlocale(LC_ALL, "ES_es.UTF-8");
     SetConsoleOutputCP(1252);
@@ -19,7 +23,7 @@ int main() {
         alumno.pideDatos();
         alumnosLst.push_back(alumno);
     }
-    system("cls");
+    clearScreen();
     for (Alumno alumno : alumnosLst) {
         alumno.pintaDatos();
     }
