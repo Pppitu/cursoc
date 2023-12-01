@@ -1,0 +1,4 @@
+Finalmente el directorio en el que está subido el código es
+
+https://github.com/Pppitu/cursoc/tree/master/prueba_01
+
